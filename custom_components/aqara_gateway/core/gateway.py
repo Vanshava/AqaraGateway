@@ -701,16 +701,16 @@ class Gateway(Thread):
                                 ((hs_color >> 8) & 0xFF) * brightness / 100),
                             'red': int(
                                 ((hs_color >> 16) & 0xFF) * brightness / 100)},
-                        'type': 'rgb',
-                        'rev': 1,
-                        'id': randint(0, 65535)
+                        'id': randint(0, 65535),
+                        'type': 'rbg',
+                        'ver': 1
                     }
                 else:
                     payload = {
                         'cmd': 'control',
                         'data': data,
-                        'rev': 1,
                         'id': randint(0, 65535)
+                        'ver': 1
                     }
                 payload = json.dumps(payload, separators=(',', ':')).encode()
                 self._mqttc.publish('ioctl/recv', payload)
