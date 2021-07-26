@@ -461,6 +461,25 @@ DEVICES = [{
         [None, None, 'lock_event', 'sensor'],
     ]
 }, {
+    'aqara.lock.bzacn4': ["Aqara", "Door Lock N100", "ZNMS16LM"],
+    'params': [
+        ['13.32.85', None, 'unlock by password', None],
+        [None, None, 'key_id', 'sensor'],
+        ['13.14.85', None, 'too much failure', None],
+        ['13.15.85', None, 'key_type', None],
+        ['13.17.85', 'lock_state', 'lock', 'sensor'],
+        ['13.55.85', 'voltage', 'voltage', None],
+        ['13.56.85', 'battery', 'battery', 'sensor'],
+        ['13.60.85', None, 'verification failed', None],
+        ['13.62.85', None, 'timestamp', None],
+        ['13.63.85', None, 'user_1', None],
+        ['13.64.85', None, 'user_2', None],
+        ['13.66.85', None, 'nfc added', None],
+        ['13.88.85', None, 'door', None],
+        ['14.83.85', None, 'bluetooth', None],
+        [None, None, 'lock_event', 'sensor'],
+    ]
+}, {
     # https://github.com/AlexxIT/XiaomiGateway3/issues/101
     'lumi.airrtc.tcpecn02': ["Aqara", "Thermostat S2", "KTWKQ03ES"],
     'params': [
